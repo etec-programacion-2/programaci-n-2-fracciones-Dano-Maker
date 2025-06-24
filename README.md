@@ -4,12 +4,10 @@
 ![Gradle](https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-## Información del Alumno
+## Información del Alumno 
+Matias Blanco
 
-**Nombre y Apellido:** [Escribir aquí tu nombre y apellido]
-
-**Curso:** [Escribir aquí tu curso]
-
+**Curso:** 4to Informatica
 **Fecha de entrega:** [Escribir aquí la fecha de entrega]
 
 ---
