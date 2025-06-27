@@ -15,7 +15,7 @@ class Fraccion(numeradorInicial: Int, denominadorInicial: Int) {
             field = value
         }
     
-    // CORRECCIÓN 1: Inicializar las propiedades en el constructor
+    
     init {
         // Validar denominador antes de asignar
         if (denominadorInicial == 0) {
@@ -27,12 +27,12 @@ class Fraccion(numeradorInicial: Int, denominadorInicial: Int) {
         this.denominador = denominadorInicial
     }
     
-    // CORRECCIÓN 2: Implementar método toString()
+    //método toString()
     override fun toString(): String {
         return "$numerador/$denominador"
     }
     
-    // CORRECCIÓN 3: Implementar método mostrar()
+    //método mostrar()
     fun mostrar() {
         println(this.toString())
     }
