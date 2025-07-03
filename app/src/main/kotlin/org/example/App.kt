@@ -1,7 +1,7 @@
 package org.example
 
 fun main() {
-    println("=== PRUEBAS BÁSICAS (código original) ===")
+    println("=== PRUEBAS BÁSICAS (Etapa 1) ===")
     val fraccion = Fraccion(3, 4)
     fraccion.mostrar()
 
@@ -17,7 +17,7 @@ fun main() {
         println("Error: ${e.message}")
     }
 
-    println("\n=== PRUEBAS DE OPERADORES SUMA Y RESTA ===")
+    println("\n=== PRUEBAS DE OPERADORES SUMA Y RESTA (Etapa 2) ===")
 
     val fraccion1 = Fraccion(1, 2)
     val fraccion2 = Fraccion(1, 3)
@@ -33,35 +33,28 @@ fun main() {
     println("\n--- Operaciones de suma ---")
     val suma1 = fraccion1 + fraccion2
     println("${fraccion1} + ${fraccion2} = ${suma1}")
-    suma1.mostrarConDecimal()
 
     val suma2 = fraccion3 + fraccion1
     println("${fraccion3} + ${fraccion1} = ${suma2}")
-    suma2.mostrarConDecimal()
 
     println("\n--- Operaciones de resta ---")
     val resta1 = fraccion3 - fraccion1
     println("${fraccion3} - ${fraccion1} = ${resta1}")
-    resta1.mostrarConDecimal()
 
     val resta2 = fraccion1 - fraccion2
     println("${fraccion1} - ${fraccion2} = ${resta2}")
-    resta2.mostrarConDecimal()
 
     val resta3 = fraccion2 - fraccion1
     println("${fraccion2} - ${fraccion1} = ${resta3}")
-    resta3.mostrarConDecimal()
 
     println("\n--- Operaciones con fracciones negativas ---")
     val suma3 = fraccion1 + fraccion4
     println("${fraccion1} + ${fraccion4} = ${suma3}")
-    suma3.mostrarConDecimal()
 
     val resta4 = fraccion1 - fraccion4
     println("${fraccion1} - ${fraccion4} = ${resta4}")
-    resta4.mostrarConDecimal()
 
-    println("\n=== PRUEBAS DE SIMPLIFICACIÓN ===")
+    println("\n=== PRUEBAS DE SIMPLIFICACIÓN (Etapa 2) ===")
     val fraccionCompleja1 = Fraccion(6, 8)
     val fraccionCompleja2 = Fraccion(10, 15)
 
@@ -71,35 +64,16 @@ fun main() {
 
     val sumaCompleja = fraccionCompleja1 + fraccionCompleja2
     println("${fraccionCompleja1} + ${fraccionCompleja2} = ${sumaCompleja}")
-    sumaCompleja.mostrarConDecimal()
 
-    println("\n=== PRUEBAS DE VALIDACIÓN ===")
-    try {
-        val fraccionInvalida = Fraccion(1, 0)
-    } catch (e: IllegalArgumentException) {
-        println("Error al crear fracción con denominador 0: ${e.message}")
-    }
+    println("\n=== OPERACIONES ENCADENADAS (Etapa 2) ===")
+    val fEnc1 = Fraccion(1, 4)
+    val fEnc2 = Fraccion(1, 4)
+    val fEnc3 = Fraccion(1, 2)
 
-    try {
-        val f1 = Fraccion(1, 2)
-        val f2 = Fraccion(1, 1)
-        println("Intentando cambiar denominador a 0...")
-        f2.denominador = 0
-        val resultado = f1 + f2
-    } catch (e: IllegalArgumentException) {
-        println("Error capturado correctamente: ${e.message}")
-    }
+    val resultadoEnc = fEnc1 + fEnc2 + fEnc3
+    println("${fEnc1} + ${fEnc2} + ${fEnc3} = ${resultadoEnc}")
 
-    println("\n=== OPERACIONES ENCADENADAS ===")
-    val f1 = Fraccion(1, 4)
-    val f2 = Fraccion(1, 4)
-    val f3 = Fraccion(1, 2)
-
-    val resultado = f1 + f2 + f3
-    println("${f1} + ${f2} + ${f3} = ${resultado}")
-    resultado.mostrarConDecimal()
-
-    println("\n=== MODIFICACIÓN DE PROPIEDADES ===")
+    println("\n=== MODIFICACIÓN DE PROPIEDADES (Etapa 1) ===")
     val fraccionModificable = Fraccion(1, 2)
     println("Fracción inicial: ${fraccionModificable}")
 
@@ -108,4 +82,15 @@ fun main() {
 
     fraccionModificable.denominador = 6
     println("Después de cambiar denominador a 6: ${fraccionModificable}")
+
+    println("\n=== MULTIPLICACIÓN Y DIVISIÓN (Etapa 3) ===")
+
+    val m1 = Fraccion(2, 3)
+    val m2 = Fraccion(3, 4)
+
+    val producto = m1 * m2
+    println("$m1 * $m2 = $producto")
+
+    val cociente = m1 / m2
+    println("$m1 / $m2 = $cociente")
 }
