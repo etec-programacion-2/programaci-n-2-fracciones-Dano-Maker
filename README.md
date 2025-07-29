@@ -8,7 +8,7 @@
 Matias Blanco
 
 **Curso:** 4to Informatica
-**Fecha de entrega:** [Escribir aquí la fecha de entrega]
+**Fecha de entrega:Martes 29/07/25
 
 ---
 
